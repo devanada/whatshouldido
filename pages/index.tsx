@@ -23,7 +23,7 @@ const schema = z.object({
 export async function getServerSideProps() {
   const res = await axios.get("https://api.todoist.com/rest/v2/tasks", {
     headers: {
-      Authorization: "Bearer c11ca453e32ba9c2af7a5e196320885debfae075",
+      Authorization: `Bearer ${process.env.TODOIST_KEY}`,
     },
   });
   return {
@@ -43,7 +43,7 @@ const Home: NextPage<Props> = ({ todos }) => {
     axios
       .post("https://api.todoist.com/rest/v2/tasks", data, {
         headers: {
-          Authorization: "Bearer c11ca453e32ba9c2af7a5e196320885debfae075",
+          Authorization: `Bearer ${process.env.TODOIST_KEY}`,
         },
       })
       .then((res) => {
