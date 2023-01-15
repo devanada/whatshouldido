@@ -6,15 +6,16 @@ interface DueType {
 }
 
 export interface TodoType {
-  comment_count?: number;
   content?: string;
-  created_at?: string;
-  creator_id?: string;
   description?: string;
+  created_at?: string;
+  comment_count?: number;
+  creator_id?: string;
   due?: DueType;
   id?: string;
   is_completed?: boolean;
   priority?: number;
   project_id?: string;
   url?: string;
+  onClickDelete?: () => void;
 }

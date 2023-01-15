@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, FC } from "react";
+import { InputHTMLAttributes, FC } from 'react';
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   register?: any;
@@ -10,7 +10,18 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 export const Input: FC<Props> = ({ id, error, register, name, ...props }) => {
   return (
     <input
-      className="w-full rounded-xl border border-dark-2 bg-dark p-2 text-lg text-white shadow-black"
+      className="w-full rounded-xl border border-dark-2 bg-light p-2 text-lg text-dark-2 shadow-md shadow-black dark:bg-dark-2 dark:text-light"
+      id={id}
+      {...(register ? register(name) : {})}
+      {...props}
+    />
+  );
+};
+
+export const TextArea: FC<Props> = ({ id, error, register, name, ...props }) => {
+  return (
+    <textarea
+      className="w-full rounded-xl border border-dark-2 bg-light p-2 text-lg text-dark-2  shadow-md shadow-black dark:bg-dark-2 dark:text-light"
       id={id}
       {...(register ? register(name) : {})}
       {...props}

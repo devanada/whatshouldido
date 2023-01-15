@@ -1,22 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
+  darkMode: 'class',
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./app/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       colors: {
-        dark: "#181818",
-        "dark-2": "#5f6368",
-        "dark-3": "#202020",
-        light: "#ffffff",
-        glass: "#1e1e2d80",
+        dark: '#383b53',
+        'dark-2': '#272d3a',
+        light: '#f7f9f9',
+        glass: '#1e1e2d80',
       },
       minHeight: {
-        navbar: "4rem",
+        navbar: '4rem',
+        footer: '8rem',
       },
     },
   },

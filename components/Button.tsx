@@ -1,4 +1,4 @@
-import { FC, ButtonHTMLAttributes } from "react";
+import { FC, ButtonHTMLAttributes } from 'react';
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
@@ -8,7 +8,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: FC<Props> = ({ label, id, ...props }) => {
   return (
     <button
-      className="rounded-xl border border-dark-2 bg-dark p-2 text-lg font-bold text-white shadow-black"
+      className="w-full rounded-xl border border-dark-2 bg-light p-2 text-lg font-bold capitalize text-dark-2 shadow-md shadow-black dark:bg-dark-2 dark:text-light"
       id={id}
       {...props}
     >

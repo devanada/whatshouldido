@@ -10,6 +10,8 @@
     "@hookform/resolvers": "^2.9.10",
     "axios": "^1.2.2",
     "clsx": "^1.2.1",
+    "cookies-next": "^2.1.1",
+    "lottie-react": "^2.3.1",
     "moment": "^2.29.4",
     "next": "latest",
     "react": "18.2.0",
